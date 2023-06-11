@@ -11,12 +11,13 @@ spec:
     app: nginx
   template:
     metadata:
-      name: pod
+      name: create
       labels:
         app: nginx
     spec:
       containers:
         - name: container
-      ports:
-        - containerPort: 80
-          protocol: TCP        
+          ports:
+            - containerPort: 80
+              protocol: TCP    
+            
