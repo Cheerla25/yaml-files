@@ -14,9 +14,9 @@ spec:
       name: pod
       labels:
         app: nginx
-      spec:
-        containers:
-          - name: container
-            ports:
-              - containerPort: 80
-                protocol: TCP        
+    spec:
+      containers:
+        - name: container
+      ports:
+        - containerPort: 80
+          protocol: TCP        
