@@ -30,12 +30,11 @@ kind: Service
 metadata:
   name: prasha-service
   labels: 
+    app: jenkins
+spec:
   app: jenkins
-  spec:
-    ports:
-      - name: prashnth-service
-        protocol: TCP
-        targetPort: 8080
-    selector:
-      app: jenkins
-    type: LoadBalancer      
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+            
