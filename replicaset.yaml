@@ -7,6 +7,9 @@ metadata:
 spec:
   minReadySeconds: 5
   replicas: 3
+  selector:
+    matchLabels:
+      app: jenkins
   template:
     metadata:
       name: prash-pod
