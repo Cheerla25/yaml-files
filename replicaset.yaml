@@ -33,8 +33,7 @@ metadata:
     app: jenkins
 spec:
   selector:
-    matchLabels:
-      app: jenkins
+    app: jenkins
   ports:
     - protocol: TCP
       port: 80
