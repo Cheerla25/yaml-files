@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: replica-rs
+  labels:
+    app: jenkins
+spec:
+  minReadySeconds: 5
+  replicas: 3
+  selector:
+    app: jenkins
+  template:
+    metadata:
+      name: pods
+      labels:
+        app: jenkins
+    spec:
+      containers:
+        - image: jenkins
+          ports:
+            - containerPort: 8080
+              name: pod
+              protocol: TCP     
