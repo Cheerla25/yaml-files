@@ -15,6 +15,7 @@ spec:
     spec:
       containers:
         - image: jenkins
+          name: prash-container
           ports:
             - containerPort: 8080
               name: pod
